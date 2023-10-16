@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Form in HTML CSS </title>
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="/public/styles/login.css"/>
+    <script src="/public/script/form.js"></script>
+  </head>
+  <body>
+    <section class="container">
+      <header>
+        <div class="header-content">
+          <img src="/img/" alt="Logo mecani-car" class="logo">
+          <h3>Registro de Devolución mecani-car</h3>
+        </div>
+      </header>
+      <form action="#" class="form" onsubmit="event.preventDefault();">
+        <div class="gender-box">
+          <h3>Tipo Devolución</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-regular" name="gender" onclick="mostrarCombobox('regular')" />
+              <label for="check-regular">1.- Regular</label>
+              <div id="comboboxContainerRegular" style="display:none;">
+                <select id="comboboxRegular" class="select-box" onchange="mostrarInput('regular')">
+                  <option value="">Selecciona una opción</option>
+                  <option>Remesa</option>
+                  <option>Boleta</option>
+                  <option>Factura</option>
+                </select>
+              </div>
+              <div id="inputContainerRegular" style="display: none;">
+                <input type="text" id="inputCodigoRegular" placeholder="Introduce Código" required />
+              </div>
+              <div id="btnContainerStep1Regular" style="display: none;">
+                <button id="btnStep1Regular" class="buttonForm">Siguiente</button>
+              </div>
+            </div>
+            
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" onclick="mostrarCombobox('female')" />
+              <label for="check-female">2.- No Conforme</label>
+              <div id="comboboxContainerFemale" style="display:none;">
+                <select id="comboboxFemale" class="select-box" onchange="mostrarInput('female')">
+                  <option value="">Selecciona una opción</option>
+                  <option>Remesa</option>
+                  <option>Boleta</option>
+                  <option>Factura</option>
+                </select>
+              </div>
+              <div id="inputContainerFemale" style="display: none;">
+                <input type="text" id="inputCodigoFemale" placeholder="Introduce Código" required />
+              </div>
+              <div id="btnContainerStep1Female" style="display: none;">
+                <button id="btnStep1Female" class="buttonForm">Siguiente</button>
+              </div>
+            </div>
+            
+            <div class="gender">
+              <input type="radio" id="check-other" name="gender" onclick="mostrarCombobox('other')" />
+              <label for="check-other">3- Garantía</label>
+              <div id="comboboxContainerOther" style="display:none;">
+                <select id="comboboxOther" class="select-box" onchange="mostrarInput('other')">
+                  <option value="">Selecciona una opción</option>
+                  <option>Remesa</option>
+                  <option>Boleta</option>
+                  <option>Factura</option>
+                </select>
+              </div>
+              <div id="inputContainerOther" style="display: none;">
+                <input type="text" id="inputCodigoOther" placeholder="Introduce Código" required />
+              </div>
+              <div id="btnContainerStep1Other" style="display: none;">
+                <button id="btnStep1Other" class="buttonForm">Siguiente</button>
+              </div>
+            </div>
+        <!---->
+
+        <div class="tittle">
+          <label>Información de la Devolución</label>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <p class="p">Vendedor Responsable</p>
+            <input type="text" placeholder="Nombre y Apellido" required />
+          </div>    
+            
+
+          
+          
+          <div class="input-box">
+            <p class="p">Correo Electrónico del Vendedor</p>
+            <input type="text" placeholder="Ejemplo@gmail.com" required />
+          </div>
+        </div> 
+        <div class="column">
+            
+            
+
+          
+          <div class="input-box">
+            <p class="p">Nombre del Cliente</p>
+            <input type="text" placeholder="Nombre y Apellido" required />
+          </div>
+          
+          <div class="input-box">
+            <p class="p">Número de Teléfono del Cliente</p>
+            <input type="text" placeholder="Teléfono" required />
+          </div>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <p class="p">Dirección del Recojo</p>
+            <input type="text" placeholder="Dirección" required />
+          </div>
+          <div class="input-box">
+            <p class="p">Referencia de ubicación</p>
+            <input type="text" placeholder="Ejemplo: Cerca del parque" required />
+          </div>
+        </div> 
+
+        <div class="column">
+          <div class="input-box">
+            <p class="p">Nombre Encargado de la Recepción</p>
+            <input type="text" placeholder="Nombre y Apellido" required />
+          </div>
+          <div class="input-box">
+            <p class="p">Horario Disponible del Cliente</p>
+            <input type="text" placeholder="Horario Disponible de mecani-car 8am - 5pm" required />
+          </div>
+        </div> 
+
+        <div class="tittle">
+          <label>Información de la Mercadería</label>
+        </div>
+
+        <div id="contenedorPrincipal" class="column">
+          <div class="columnM">
+            <div class="box-id">
+              <p id="itemNumber">Item 1</p>
+            </div>
+            <div class="input-box">
+              <p class="infoDev">Código</p>
+              <input type="text" class="hidden-input">
+            </div>
+            <div class="input-box">
+              <p class="infoDev">Cantidad</p>
+              <input type="number" class="hidden-input">
+            </div>
+            <div class="input-box">
+              <p class="infoDev">Descripción</p>
+              <input type="text" class="hidden-input">
+            </div>
+            <div class="box-buttons">
+              <button id="btnMostrarInputs" class="buttonForm"  type="button" onclick="agregarItem()";>Agregar<br>Item</button>
+              <button id="btnOcultarInputs" class="buttonForm"  type="button" onclick="eliminarItem()">Eliminar<br>Item</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-btn-form">
+          <button  class="btnFinal" onclick="window.location.href='status.html'">Registrar</button>
+          <button  class="btnFinal" onclick="window.location.href='sign-in.html'">Volver a Inicio de Sesión</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

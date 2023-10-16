@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecani-Car - Status Devolución</title>
+    <link rel="stylesheet" href="/public/styles/login.css"/>
+</head>
+  <body>
+    <section class="container-status">
+      <header>
+        <div class="header-content">
+          <img src="" alt="Logo mecani-car" class="logo">
+          <h3>Status Devolución Mecani-Car</h3>
+        </div>
+      </header>
+      <form action="#" class="form" onsubmit="event.preventDefault();">
+        <div class="col-status">
+            <li>✔️ Programado</li> <div class="progress-bar1"></div>              
+        </div>
+        <div class="col-status">
+            <li>🟥 En Ruta</li> <div class="progress-bar2"></div>        
+        </div>
+        <div class="col-status">
+            <li>🟥 Recibido</li> <div class="progress-bar3"></div>        
+        </div>
+        <div class="col-status">
+            <li>🟥 Terminado</li> <div class="progress-bar4"></div>        
+        </div>
+        <div class="container-notas">
+            <label> -> Estimación para el inicio y final del recojo de devolución, será máximo 3 días.</label>
+            <br>
+            <label> -> Días de operación Mecani-Car: de Lunes a Viernes.</label>
+        </div>
+
+        <div class="col-btn-form">
+          <button class="btnFinal" onclick="window.location.href='sign-in.html'">Volver a Inicio de sesión</button>
+          <button class="btnFinal" onclick="window.location.href='form.html'">Realizar otra Devolución</button>
+        </div>
+
+      </form>
+    </section>
+  </body>
+</html>
